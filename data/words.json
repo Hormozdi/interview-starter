@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "word": "abandon",
+    "phonetic": "/əˈbændən/",
+    "definitions": [
+      "to leave someone or something behind; to desert",
+      "to give up completely"
+    ],
+    "examples": [
+      "They had to abandon the car.",
+      "He abandoned the plan."
+    ]
+  },
+  {
+    "id": 2,
+    "word": "ability",
+    "phonetic": "/əˈbɪləti/",
+    "definitions": [
+      "possession of the means or skill to do something"
+    ],
+    "examples": [
+      "She has the ability to solve complex problems."
+    ]
+  },
+  {
+    "id": 3,
+    "word": "abroad",
+    "phonetic": "/əˈbrɔːd/",
+    "definitions": [
+      "in or to a foreign country"
+    ],
+    "examples": [
+      "He studied abroad for two years."
+    ]
+  },
+  {
+    "id": 4,
+    "word": "absorb",
+    "phonetic": "/əbˈzɔːrb/",
+    "definitions": [
+      "to take in or soak up (energy, liquid, or another substance)",
+      "to take in information, ideas, or experience"
+    ],
+    "examples": [
+      "Plants absorb water.",
+      "I couldn't absorb all the details."
+    ]
+  },
+  {
+    "id": 5,
+    "word": "abstract",
+    "phonetic": "/ˈæbstrækt/",
+    "definitions": [
+      "existing in thought or as an idea but not having a physical or concrete existence"
+    ],
+    "examples": [
+      "Abstract concepts can be hard to grasp."
+    ]
+  }
+]
