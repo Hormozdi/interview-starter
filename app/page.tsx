@@ -1,6 +1,7 @@
 import SearchBox from "@/components/SearchBox";
 import WordCard from "@/components/WordCard";
 import { getBookmarks } from "./actions";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 async function fetchWords(q: string) {
   const url = q ? `/api/words?q=${encodeURIComponent(q)}` : "/api/words";
@@ -15,12 +16,12 @@ export default async function Page({ searchParams }: { searchParams?: { q?: stri
   const items = await fetchWords(q);
   const bookmarkIds = await getBookmarks();
 
-  const placeholder = process.env.NODE_ENV === "development" ? "Search dev…" : "Search…";
+  const lang = getLangFromCookie();
 
   return (
     <main className="space-y-6">
       <header className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Lingano Mini Dictionary</h1>
+        <LanguageSwitcher current={lang} />
         <div className="text-sm text-slate-600 dark:text-slate-300">
           Bookmarks: <span className="font-semibold">{bookmarkIds.length}</span>
         </div>
