@@ -33,17 +33,7 @@ export default async function Page({ searchParams }: { searchParams?: { q?: stri
       {items.length === 0 ? (
         <p className="text-slate-500">No results. Try a different query.</p>
       ) : (
-        <div className="grid gap-3">
-          {items.map((w) => (
-            <WordCard
-              key={w.id}
-              item={w}
-              query={q}
-              isBookmarked={bookmarkIds.includes(w.id)}
-              onBookmarked={() => {}}
-            />
-          ))}
-        </div>
+        <WordCardsList items={items} query={q} bookmarkIds={bookmarkIds} />
       )}
     </main>
   );
