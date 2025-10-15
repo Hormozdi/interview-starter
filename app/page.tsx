@@ -48,19 +48,3 @@ export default async function Page({ searchParams }: { searchParams?: { q?: stri
     </main>
   );
 }
-
-"use client";
-import { useCallback } from "react";
-import { useRouter } from "next/navigation";
-
-function SearchClient({ defaultQuery, placeholder }: { defaultQuery: string; placeholder: string }) {
-  const router = useRouter();
-  const onChange = useCallback((next: string) => {
-    const params = new URLSearchParams();
-    if (next.trim()) params.set("q", next.trim());
-    const url = params.toString() ? `/?${params.toString()}` : "/";
-    router.replace(url);
-  }, [router]);
-
-  return <SearchBox defaultQuery={defaultQuery} onChange={onChange} />;
-}
