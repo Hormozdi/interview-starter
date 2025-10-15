@@ -2,5 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: light dark; }
-body { @apply min-h-dvh bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100; }
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  @apply min-h-dvh bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+}
+
+input {
+  direction: ltr;
+  text-align: left;
+}
+
+input::placeholder {
+  unicode-bidi: bidi-override;
+}
