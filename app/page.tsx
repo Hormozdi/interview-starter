@@ -8,7 +8,7 @@ async function fetchWords(q: string) {
   const res = await fetch(url); 
   if (!res.ok) throw new Error("Failed to load words");
   const data = await res.json();
-  return data.items as Array<{ id: number; word: string; phonetic?: string; definitions: string[]; examples?: string[]; }>;
+  return data.items as Word[];
 }
 
 export default async function Page({ searchParams }: { searchParams?: { q?: string } }) {

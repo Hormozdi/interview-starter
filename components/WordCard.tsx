@@ -3,15 +3,7 @@ import { useTransition } from "react";
 import { toggleBookmark } from "@/app/actions";
 import { splitForHighlight } from "@/lib/highlight";
 import { Bookmark, BookmarkCheck } from "lucide-react";
-import { clsx } from "clsx";
-
-type Word = {
-  id: number;
-  word: string;
-  phonetic?: string;
-  definitions: string[];
-  examples?: string[];
-};
+import clsx from "clsx";
 
 export default function WordCard({
   item, query, isBookmarked, onBookmarked
